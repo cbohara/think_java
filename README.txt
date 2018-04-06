@@ -92,4 +92,21 @@ if ada.equals(alan) {
 	System.out.println("Same name");
 }
 
+garbage collection
+
+Point blank = new Point(3, 4);
+blank = null;
+
+if there is no references to an object, there is no way to access its attributes or invoke a method on it
+however, Point(3, 4) is still taking up space in memory
+
+as the program runs the system automatically looks for stranded objects and reclaims them
+then space is reused for new objects
+
+attribute = object's data
+method = object's code
+class = defines which attributes and methods the object will have
+
+java library source code is stored in 
+/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip
 
