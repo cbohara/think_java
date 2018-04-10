@@ -110,3 +110,27 @@ class = defines which attributes and methods the object will have
 java library source code is stored in 
 /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip
 
+classes
+	defining a class creates new object type with the same name
+	every object belongs to some object type
+	a class definition is like a template for objects
+		specifies what attributes the objects have
+			attributes = instance variables 
+		what methods can operate on them
+
+private instance variables 
+	help keep classes isolated from each other so that changes in one class won’t require changes in other classes
+	simplifies what other programmers need to understand in order to use your classes = information hiding
+
+constructor
+	specialized method that initializes instance variables 
+	name of constructor = name of class
+	have no return type
+	keyword static is omitted
+
+this 
+	refers to the object we are creating
+	can read and write the instance variables of this
+	can pass this as an argument to other methods
+	cannot declare this
+	cannot make an assignment to it
