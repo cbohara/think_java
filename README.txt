@@ -115,18 +115,27 @@ classes
 	every object belongs to some object type
 	a class definition is like a template for objects
 		specifies what attributes the objects have
-			attributes = instance variables 
+			attributes = instance variables = each instance has its own variables 
 		what methods can operate on them
 
-private instance variables 
-	help keep classes isolated from each other so that changes in one class won’t require changes in other classes
-	simplifies what other programmers need to understand in order to use your classes = information hiding
+data encapsulation
+	use objects as parameters and return values 
+	rather than passing and returning multiple values 
+
+information hiding 
+	if anything in 1 class changes, the other class will have to change as well
+	use methods to interact with another class > the two classes are independent of one another
+	private instance variables 
+		help keep classes isolated from each other 
+		so that changes in one class won’t require changes in other classes
+	simplifies what other programmers need to understand in order to use your classes
 
 constructor
 	specialized method that initializes instance variables 
 	name of constructor = name of class
 	have no return type
 	keyword static is omitted
+	custructors can be overloaded = provide multiple constructors with different parameters 
 
 this 
 	refers to the object we are creating
@@ -134,3 +143,7 @@ this
 	can pass this as an argument to other methods
 	cannot declare this
 	cannot make an assignment to it
+
+client = class that uses objects defined in another class
+
+
