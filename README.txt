@@ -146,4 +146,27 @@ this
 
 client = class that uses objects defined in another class
 
+static members belong to the class not a specific instance
+only 1 instance of a static field exists
 
+== checks if 2 objects are identical
+	aka same memory address
+
+equals checks if values are equivalent 
+	same value
+
+pure methods
+	don't modify parameters of an existing object
+	don't have side effects like printing
+	the return value depends only on the parameters 
+
+modifier methods
+	usually void methods but sometimes return reference to the object they modify
+	more efficient bc don't create new objects
+	error prone
+
+to make a class immutable
+	provide getters but no setters
+	pure methods only
+	can be difficult to work with at first
+	avoid hours of debugging later
