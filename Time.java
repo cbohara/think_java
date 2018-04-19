@@ -6,7 +6,9 @@ public class Time {
 	private int minute;
 	private double second;
 
-	// constructor 
+	// constructor takes no arguments
+	// initializes the instance with default values
+	// this refers to the object we are creating
 	public Time() {
 		this.hour = 0;
 		this.minute = 0;
@@ -14,6 +16,7 @@ public class Time {
 	}
 
 	// value constructor
+	// copies values from parameters to instance variables
 	public Time(int hour, int minute, double second) {
 		this.hour = hour;
 		this.minute = minute;
@@ -32,6 +35,7 @@ public class Time {
 		return this.second;
 	}
 
+	// setters allow other classes to modify instance variables in Time class
 	public void setHour(int hour) {
 		this.hour = hour;
 	}
@@ -57,6 +61,7 @@ public class Time {
 	// instance method applied to an instance of the class
 	// can use this to find the instance variable values 
 	public String toString() {
+		// returns a formatted string which can be displayed by println
 		return String.format("%02d:%02d:%04.1f\n", this.hour, this.minute, this.second);
 	}
 
@@ -71,7 +76,7 @@ public class Time {
 		sum.hour = t1.hour + t2.hour;
 		sum.minute = t1.minute + t2.minute;
 		sum.second = t1.second + t2.second;
-		if (sum.second >= 60.0 {
+		if (sum.second >= 60.0) {
 			sum.second -= 60.0;
 			sum.minute += 1;
 		}
@@ -88,7 +93,7 @@ public class Time {
 		sum.minute = this.minute + t2.minute;
 		sum.second = this.second + t2.second;
 
-		if (sum.second >= 60.0 {
+		if (sum.second >= 60.0) {
 			sum.second -= 60.0;
 			sum.minute += 1;
 		}
@@ -114,9 +119,12 @@ public class Time {
 
 	public static void main(String args[]) {
 		// instance with default instance variable values
+		// when you invoke new Java creates an object and calls your constructor to initialize instance vars 
+		// when the constructor is done > new returns a reference to the new object
 		Time time1 = new Time();
+
 		// instance with declared instance variable values
-		Time time2 = new Time(0, 0, 0.0);
+		Time time2 = new Time(11, 59, 59.9);
 
 		// getter
 		System.out.println(time1.getHour());
@@ -124,6 +132,8 @@ public class Time {
 		time1.setHour(10);
 		System.out.println(time1.equals(time2));
 		time2.setHour(10);
+		time2.setMinute(0);
+		time2.setSecond(0.0);
 		System.out.println(time1.equals(time2));
 
 		// static method

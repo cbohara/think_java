@@ -122,6 +122,12 @@ data encapsulation
 	use objects as parameters and return values 
 	rather than passing and returning multiple values 
 
+public class
+	can be used by other classes
+private instance variables 
+	can only be accessed from inside the class
+	if you try to read or write these private variables from outside the class = compiler error
+
 information hiding 
 	if anything in 1 class changes, the other class will have to change as well
 	use methods to interact with another class > the two classes are independent of one another
