@@ -176,3 +176,41 @@ to make a class immutable
 	pure methods only
 	can be difficult to work with at first
 	avoid hours of debugging later
+
+local variables
+	declared inside a method
+	created when the method is invoked 
+	memory is reclaimed after the method has ended
+
+instance variables
+	declared inside a class definition 
+	created when you construct an object
+	reclaimed when the object is garbage collected
+
+class variables
+	defined in class definition
+		before method definitions
+	static
+		identified by keyword static
+		means variable is shared
+	created when program begins or class is used for the first time
+		survive until the program ends 
+	shared across all instances of the class
+	final
+		often used to store constants
+	advantage
+		don't need to undergo constant garbage collection
+		can be used by other methods and classes
+		no danger making them public because
+			array variables are final
+			string references are immutable
+
+comparisons
+	< > ==
+		can be used to compare primitive types
+		these operators do not work on object types
+	totally ordered
+		some types you can compare any two values and tell which is bigger
+	unordered
+		no way to tell if 1 is bigger than the other
+		true < false => compiler error
